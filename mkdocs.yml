@@ -41,7 +41,6 @@ markdown_extensions:
   - tables
   - admonition  # 提示块
   - meta  # 定义元数据，通过文章上下文控制，如disqus
-  - markdown_checklist.extension
   - pymdownx.caret  # 下划线上标
   - pymdownx.tilde  # 删除线下标
   - pymdownx.critic  # 增加删除修改高亮注释，可修饰行内或段落
