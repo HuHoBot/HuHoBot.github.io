@@ -1,29 +1,5 @@
-[ServerInfo]
-description = "Show some information through scoreboard & bossbar."
-authors = ["daoge_cmd"]
-github = "https://github.com/AllayMC/ServerInfo"
-adapter = "Spigot"
-
-[Spark]
-description = "A performance profiler for Minecraft clients, servers, and proxies."
-authors = ["Luck", "IWareQ", "daoge_cmd"]
-github = "https://github.com/AllayMC/spark-extra-platforms"
+[UserWhiteList]
+description = "让玩家可以在群内自主添加白名单"
+authors = ["HuoHuas001"]
+github = "https://github.com/HuHoBot/ExpansionPlugin/tree/main/HuHoBot_RC_WhiteList"
 adapter = "Lse"
-
-[Terra]
-description = "Voxel world generation modding platform."
-authors = ["daoge_cmd", "IWareQ", "dfsek", "duplexsystem", "Astrash", "solonovamax", "Sancires", "Aureus", "RogueShade"]
-github = "https://github.com/PolyhedralDev/Terra"
-adapter = "Allay"
-
-[RemoteCommand]
-description = "Execute server command through http interface."
-authors = ["daoge_cmd"]
-github = "https://github.com/AllayMC/RemoteCommand"
-adapter = "Spigot"
-
-[allaymc-kotlinx]
-description = "Kotlin-style Extension Library and Shared Standard Library for Allay Server"
-authors = ["MineBuilder"]
-github = "https://github.com/MineBuilders/allaymc-kotlinx"
-adapter = "Spigot"
