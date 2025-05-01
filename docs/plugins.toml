@@ -4,8 +4,15 @@ authors = ["HuoHuas001"]
 github = "https://github.com/HuHoBot/ExpansionPlugin/tree/main/HuHoBot_RC_WhiteList"
 adapter = "Lse"
 
-[HuHoMonitor]
+[HuHoMonitor Spigot]
 description = "HuHoBot服务器状态信息查询插件"
 authors = ["HuoHuas001"]
 github = "https://github.com/HuHoBot/HuHoMonitor"
 adapter = "Spigot"
+
+[HuHoMonitor Lse]
+description = "HuHoBot服务器状态信息查询插件"
+authors = ["HuoHuas001"]
+github = "https://github.com/HuHoBot/ExpansionPlugin/tree/main/HuHoMonitor"
+adapter = "Lse"
+
