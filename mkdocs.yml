@@ -6,8 +6,11 @@ copyright: Copyright © 2025 HuoHuas001
 
 nav:
   - 主页: index.md
+  - 常见问题: Question/index.md
   - 附属插件列表: plugins.md
+  - 管理员帮助: AdminHelp/index.md
   - 适配器指南:
+    - 主页: Adapter/index.md
     - Spigot: Adapter/Spigot.md
     - LSE: Adapter/LSE.md
     - EndStone: Adapter/EndStone.md
