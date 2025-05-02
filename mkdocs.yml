@@ -15,6 +15,7 @@ nav:
     - LSE: Adapter/LSE.md
     - EndStone: Adapter/EndStone.md
     - Allay: Adapter/Allay.md
+    - Nukkit-MOT: Adapter/Nukkit-MOT.md
   - 附属插件开发指南:
     - Spigot: Develop/Spigot.md
     - LSE: Develop/LSE.md

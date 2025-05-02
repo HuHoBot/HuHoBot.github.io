@@ -3,3 +3,4 @@
 - [LSE](LSE.md)
 - [EndStone](EndStone.md)
 - [Allay](Allay.md)
+- [Nukkit-MOT](Nukkit-MOT.md)
