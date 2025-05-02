@@ -15,9 +15,13 @@ nav:
     - LSE: Adapter/LSE.md
     - EndStone: Adapter/EndStone.md
     - Allay: Adapter/Allay.md
-  - 开发指南:
+  - 附属插件开发指南:
     - Spigot: Develop/Spigot.md
     - LSE: Develop/LSE.md
+  - 协议开发指南:
+    - 主页: Protocol/index.md
+    - 请求: Protocol/requests.md
+    - 事件: Protocol/events.md
 
 
 theme:
