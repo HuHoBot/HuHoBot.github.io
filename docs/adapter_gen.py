@@ -42,7 +42,7 @@ with mkdocs_gen_files.open("Adapter/Third-Party.md", "w") as f:
 
     fp("## 添加适配器")
     el()
-    fp("您可以在网站上添加自己的插件，只需打开一个[新Pull Request](https://github.com/HuHoBot/HuHoBot.github.io/pulls)即可。")
+    fp("您可以在网站上添加自己的适配器，只需打开一个[新Pull Request](https://github.com/HuHoBot/HuHoBot.github.io/pulls)即可。")
     el()
 
     fp("## 可用适配器列表")

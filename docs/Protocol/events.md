@@ -35,6 +35,8 @@
         |1 | 握手成功 |
         |2 | 带有附加消息的握手成功 |
         |3 | 客户端密钥(hashKey)不匹配 |
+        |4 | 客户端版本(version)不匹配 |
+        |5 | BotClient尚未连接，等待握手成功 |
         |6 | 等待绑定 |
         |其他| 根据状态信息决定|
 
@@ -51,7 +53,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md)回复是否添加成功的消息
+    - 使用请求中的[反馈包(respone)](requests.md#respone)回复是否添加成功的消息
 
 ## 添加白名单(add)
 - 消息类型(type): `"add"`
@@ -63,7 +65,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md)回复是否添加成功的消息
+    - 使用请求中的[反馈包(respone)](requests.md#respone)回复是否添加成功的消息
 
 
 ## 删除白名单(delete)
@@ -76,7 +78,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md)回复是否删除成功的消息
+    - 使用请求中的[反馈包(respone)](requests.md#respone)回复是否删除成功的消息
 
 ## 执行命令(cmd)
 - 消息类型(type): `"cmd"`
@@ -88,7 +90,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md)回复命令执行结果
+    - 使用请求中的[反馈包(respone)](requests.md#respone)回复命令执行结果
 
 ## 查询白名单(queryList)
 - 消息类型(type): `"queryList"`
@@ -102,7 +104,7 @@
     ```
 - 注: 传入的包体可能是`key`或者`page`两者其一，需要自行判断并做出选择
 - 回执消息： `是`
-    - 见请求中的[查询白名单返回结果(queryWl)](requests.md)
+    - 见请求中的[查询白名单返回结果(queryWl)](requests.md#querywl)
 
 ## 查询在线玩家(queryOnline)
 - 消息类型(type): `"queryOnline"`
@@ -112,7 +114,7 @@
     {}
     ```
 - 回执消息： `是`
-    - 见请求中的[查询在线玩家返回结果(queryOnline)](requests.md)
+    - 见请求中的[查询在线玩家返回结果(queryOnline)](requests.md#queryonline)
 
 ## 服务端命令关闭连接(shutdown)
 - 消息类型(type): `"queryOnline"`
@@ -147,7 +149,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md)回复命令执行结果
+    - 使用请求中的[反馈包(respone)](requests.md#respone)回复命令执行结果
 
 ## 管理员执行自定义命令(runAdmin)
 - 消息类型(type): `"runAdmin"`
@@ -171,7 +173,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md)回复命令执行结果
+    - 使用请求中的[反馈包(respone)](requests.md#respone)回复命令执行结果
 
 - 若使用与上文`执行自定义命令(run)`同样的代码，请注意判断权限问题
 
@@ -194,7 +196,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[绑定确认(bindConfirm)](requests.md)进行确认
+    - 使用请求中的[绑定确认(bindConfirm)](requests.md#bindconfirm)进行确认
 
 
 

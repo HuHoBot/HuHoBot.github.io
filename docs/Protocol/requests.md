@@ -13,7 +13,7 @@
         "platform":"", // 插件平台(自定义平台名称，不可为空)
     }
     ```
-- 回报Body: 该包体带有`shaked`事件，请前往[HuHoBot Websocket 协议-事件](events.md)查看
+- 回报Body: 该包体带有`shaked`事件，请前往[HuHoBot Websocket 协议-事件](events.md#shaked)查看
 
 - 服务器连接成功后第一件事情就是发送握手包，否则服务器无法标记该客户端
 - 如果是一个新的平台，请与管理员联系注册平台，否则会无法连接，但可以先设置版本为`"dev"`便可正常连接
