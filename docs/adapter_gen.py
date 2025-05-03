@@ -20,7 +20,7 @@ def parse_github_url(url):
     
     return organization, repository
 
-with mkdocs_gen_files.open("plugins.md", "w") as f:
+with mkdocs_gen_files.open("Adapter/Third-Party.md", "w") as f:
     def fp(str):
         print(str, file=f)
 
@@ -35,36 +35,28 @@ with mkdocs_gen_files.open("plugins.md", "w") as f:
     fp("---")
     el()
 
-    fp("# 附属插件列表")
+    fp("# 第三方适配器")
     el()
-    fp("本页包含一些可作为附属插件拓展HuHoBot功能的可用插件。")
+    fp("本页包含一些HuHoBot的第三方适配器")
     el()
 
-    fp("## 添加插件")
+    fp("## 添加适配器")
     el()
     fp("您可以在网站上添加自己的插件，只需打开一个[新Pull Request](https://github.com/HuHoBot/HuHoBot.github.io/pulls)即可。")
     el()
 
-    fp("## 可用插件列表")
+    fp("## 可用适配器列表")
     el()
     fp("<div class=\"grid cards\" markdown>")
     el()
 
-    config = toml.load("docs/plugins.toml")
+    config = toml.load("docs/adapter.toml")
     for name, info in config.items():
         description = info["description"]
         authors = info["authors"]
         github = info["github"]
         user, repo = parse_github_url(github)
-        adapter = info["adapter"].lower()
 
-        adapterColor = "blue"
-        if adapter == "spigot":
-            adapterColor = "green"
-        elif adapter == "lse":
-            adapterColor = "red"
-        elif adapter == "allay":
-            adapterColor = "orange"
 
         fp(f"-   **{name}** <small>by {", ".join(authors)}</small>")
         el()
@@ -72,7 +64,6 @@ with mkdocs_gen_files.open("plugins.md", "w") as f:
         fp(f"    ![License](https://img.shields.io/github/license/{user}/{repo}?style=flat-square)")
         fp(f"    ![Last Commit](https://img.shields.io/github/last-commit/{user}/{repo}?style=flat-square)")
         fp(f"    ![Top Language](https://img.shields.io/github/languages/top/{user}/{repo}?style=flat-square)")
-        fp(f"    ![Adapter](https://img.shields.io/badge/Adapter-{adapter.upper()}-{adapterColor}?style=flat-square)")
         el()
         fp("    ---")
         el()
