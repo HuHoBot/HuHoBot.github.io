@@ -10,7 +10,7 @@
 
 从 GitHub Releases 页面下载最新版本的 `HuHoBot-AllayMC.jar` 文件：
 
-- 访问 [HuHoBot Releases](https://github.com/HuHoBot/SpigotAdapter/releases)
+- 访问 [HuHoBot Releases](https://github.com/HuHoBot/AllayMCAdapter/releases)
 - 下载最新版本的 `HuHoBot-AllayMC.jar`
 
 ### 2. 配置项目依赖
