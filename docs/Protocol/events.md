@@ -117,7 +117,7 @@
     - 见请求中的[查询在线玩家返回结果(queryOnline)](requests.md#queryonline)
 
 ## 服务端命令关闭连接(shutdown)
-- 消息类型(type): `"queryOnline"`
+- 消息类型(type): `"shutdown"`
 - 说明：服务端命令客户端关闭连接
 - 事件body
     ```json5

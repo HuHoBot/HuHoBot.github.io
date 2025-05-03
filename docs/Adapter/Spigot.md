@@ -27,17 +27,7 @@
     - 打开浏览器，访问 [HuHoBot-SpigotAdapter Releases](https://github.com/HuHoBot/SpigotAdapter/releases)
     - 下载最新版本的 `HuHoBot-vx.x.x-Spigot.jar` 文件
 
-2. **放置插件文件**：
-    - 将下载的 `HuHoBot-vx.x.x-Spigot.jar` 文件放入服务器的 `plugins` 目录中
-
-3. **重启服务器**：
-    - 重启你的 Minecraft 服务器以加载新插件
-
-4. **添加机器人**
-    - [加入交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=N6tVRxGR8sDwYHBx9YgAhkqRTp1gseyk&authKey=M7Fd3Op6nHjXjSXefBtHBPqIq2wtX8AfufZor9DrfRrJkhyS2rohkt7iuOSwbtn8&noverify=0&group_code=1005746321) 点击HuHo_Bot头像并添加到群聊
-
-5. **完成绑定**：
-    - 按照控制台提示完成服务器与机器人的绑定操作
+2. **参照** [快速开始](../QuickStart/index.md)
 
 ### 高级配置（可选）
 
