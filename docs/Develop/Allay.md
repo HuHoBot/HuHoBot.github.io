@@ -8,10 +8,10 @@
 
 #### 1.2 获取最新版 HuHoBot JAR 文件
 
-从 GitHub Releases 页面下载最新版本的 `HuHoBot-Spigot.jar` 文件：
+从 GitHub Releases 页面下载最新版本的 `HuHoBot-AllayMC.jar` 文件：
 
 - 访问 [HuHoBot Releases](https://github.com/HuHoBot/SpigotAdapter/releases)
-- 下载最新版本的 `HuHoBot-Spigot.jar`
+- 下载最新版本的 `HuHoBot-AllayMC.jar`
 
 ### 2. 配置项目依赖
 
@@ -20,85 +20,57 @@
 在你的 `build.gradle` 文件中添加以下内容，将本地 HuHoBot JAR 文件作为编译时依赖：
 
 ```gradle 
-dependencies { 
-    compileOnly files("libs/HuHoBot-x.x.x-Spigot.jar") 
+dependencies {
+    compileOnly(fileTree("libs") { include("*.jar") })
 }
 ```
 
 ### 3. 开发自定义命令监听器
 
-#### 3.1 创建监听器类
+#### 3.1 创建插件类
 
-创建一个新的 Java 类 `HuHoBotExample.java`，继承 `JavaPlugin` 并实现 `Listener` 接口：
+创建一个新的 Java 类 `JavaPluginTemplate.java`，继承 `Plugin`：
 
 ```java 
 package me.yourpackage;
 
-import cn.huohuas001.huHoBot.Api.BotCustomCommand;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
+import lombok.extern.slf4j.Slf4j;
+import org.allaymc.api.plugin.Plugin;
+import org.allaymc.api.server.Server;
 
-import java.util.logging.Logger;
 
-public final class HuHoBotExample extends JavaPlugin implements Listener {
-    private Logger logger;
+@Slf4j
+public class JavaPluginTemplate extends Plugin {
 
     @Override
     public void onEnable() {
-        this.logger = getLogger();
-
-        // 检查 HuHoBot 是否已安装
-        Plugin huhoBot = getServer().getPluginManager().getPlugin("HuHoBot");
-        if (huhoBot == null) {
-            this.getLogger().severe("HuHoBot is not installed. Disabling...");
-            this.getServer().getPluginManager().disablePlugin(this);
-            return;
-        }
-
-        try {
-            Class.forName("cn.huohuas001.huHoBot.Api.BotCustomCommand");
-        } catch (ClassNotFoundException e) {
-            logger.severe("无法加载 BotCustomCommand 类：" + e.getMessage());
-        }
-
-        // 注册事件监听器
-        this.getServer().getPluginManager().registerEvents(this, huhoBot);
+        Server.getInstance().getEventBus().registerListener(new MyEventHandle()); //注册事件监听器
+        //... 
     }
+}
+```
+
+#### 3.2 创建监听器类
+
+再创建一个新的 Java 类 `MyEventHandle.java`：
+
+```java 
+package me.yourpackage;
+
+import org.allaymc.api.eventbus.EventHandler;
+import cn.huohuas001.huHoBot.Api.BotCustomCommand;
+
+public class MyEventHandle {
 
     @EventHandler
-    public void onCommandSend(BotCustomCommand event) {
-        JSONObject data = event.getData();
-
-        // 获取关键词和参数
-        String keyWord = data.getString("key");
-        List<String> paramsList = data.getJSONArray("runParams").toJavaList(String.class);
-
-        // 获取用户信息
-        JSONObject author = data.getJSONObject("author");
-        String qlogoUrl = author.getString("qlogoUrl");
-        String bindNick = author.getString("bindNick");
-        String openId = author.getString("openId");
-
-        // 获取群组信息
-        JSONObject group = data.getJSONObject("group");
-        String groupOpenId = group.getString("openId");
-
-        // 执行自定义逻辑...
-        if (keyWord.equals("关键字")) {
-            event.setCancelled(true);
-
-            // 构建自定义响应
-            JSONObject responseJson = new JSONObject();
-            responseJson.put("text", "这是返回的文本消息");
-            responseJson.put("imgUrl", "https://example.com/image.jpg");
-
-            // 返回自定义响应
-            event.response(responseJson, "custom");
+    private void onBotCommand(BotCustomCommand event) {
+        String keyWord = "test"; //触发该命令的关键字
+        if(event.getCommand().equals(keyWord)){
+            event.respone("test","success"); //返回信息
+            event.setCancelled(true); //一定要取消，证明你接管了这个命令
         }
     }
+
 }
 ```
 
