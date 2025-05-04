@@ -53,7 +53,7 @@
     }
     ```
 - 回执消息： `是`
-    - 使用请求中的[反馈包(respone)](requests.md#respone)回复是否添加成功的消息
+    - 使用请求中的[发送消息(chat)](requests.md#chat)来回复这个消息，发送到群里
 
 ## 添加白名单(add)
 - 消息类型(type): `"add"`
