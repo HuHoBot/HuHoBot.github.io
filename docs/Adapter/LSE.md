@@ -39,8 +39,10 @@
 	"serverName": "server", // 服务器名称
 	"addSimulatedPlayerTip": true, //是否添加模拟玩家提示
 	"chatFormat": {
-		"game": "<{name}> {msg}", // 群聊格式
-		"group": "群:<{nick}> {msg}"
+		"game": "<{name}> {msg}", // 服内消息转发到群内时的文本
+		"group": "群:<{nick}> {msg}", //群内消息转发到服内时的文本
+		"post_chat": true, //是否在群内发送消息到服务器内
+		"post_prefix": "" //群内消息转发到服内时的前缀
 	},
 	"motd": {
 		"server_ip": "play.easecation.net", //使用/查在线的时候显示的图片地址（改成你自己的进服IP）

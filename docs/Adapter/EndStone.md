@@ -35,7 +35,12 @@
 
 ```json5
 {
-  "chatFormatGroup": "群:<{nick}> {msg}", // 群聊格式
+  "chatFormat": {
+		"game": "<{name}> {msg}", // 服内消息转发到群内时的文本
+		"group": "群:<{nick}> {msg}", //群内消息转发到服内时的文本
+		"post_chat": true, //是否在群内发送消息到服务器内
+		"post_prefix": "" //群内消息转发到服内时的前缀
+	},
   "customCommand": [ //见下文 "配置自定义命令"
     {
       "command": "whitelist add &1",

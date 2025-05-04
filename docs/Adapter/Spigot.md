@@ -49,8 +49,10 @@ serverId: null
 hashKey: null
 
 chatFormat:
-  from_game: "<{name}> {msg}" #不用管
+  from_game: "<{name}> {msg}" #服内消息转发到群内时的文本
   from_group: "群:<{nick}> {msg}" #群内消息转发到服内时的文本
+  post_chat: true #是否在群内发送消息到服务器内
+  post_prefix: "" #群内消息转发到服内时的前缀
 
 motd:
   server_ip: "play.hypixel.net" #使用"/查在线"时的Motd图片地址（改成你的进服地址）
