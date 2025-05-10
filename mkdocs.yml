@@ -19,6 +19,8 @@ nav:
     - Nukkit-MOT: Adapter/Nukkit-MOT.md
     - 第三方: Adapter/Third-Party.md
   - 附属插件开发指南:
+    - 数据包: Develop/DataPack.md
+    - 事件: Develop/Events.md
     - Spigot: Develop/Spigot.md
     - LSE: Develop/LSE.md
     - Allay: Develop/Allay.md

@@ -133,55 +133,5 @@ public final class HuHoBotExample extends JavaPlugin implements Listener {
 通过以上步骤，你就可以成功地开发并部署一个基于 `HuHoBot` 的自定义命令监听器插件。如果有任何问题或建议，请随时提交 Issue 或
 PR！
 
-### 附录：事件数据结构说明
-
-在 `BotCustomCommand` 事件中，`event.data` 包含以下 JSON 数据结构：
-
-```json 
-{
-  "key": "关键字",
-  "runParams": [
-    "参数1",
-    "参数2"
-  ],
-  "author": {
-    "qlogoUrl": "用户头像URL",
-    "bindNick": "绑定昵称",
-    "openId": "用户OpenID"
-  },
-  "group": {
-    "openId": "群组OpenID"
-  }
-}
-```
-
-- **key**: 触发命令的关键词。
-- **runParams**: 命令执行时传递的参数列表。
-- **author**: 发送命令的用户信息。
-    - **qlogoUrl**: 用户头像 URL。
-    - **bindNick**: 用户绑定的昵称。
-    - **openId**: 用户的 OpenID。
-- **group**: 群组信息。
-    - **openId**: 群组的 OpenID。
-
-### 附录：返回自定义响应
-
-如果需要返回复杂的 JSON 结构，可以使用 `JSONObject` 形式的 `response` 方法：
-
-```java 
-event.response(responseJson, "custom");
-```
-
-responseJson示例：
-
-```json
-{
-  "text": "这是返回的文本消息",
-  //可留空
-  "imgUrl": "https://example.com/image.jpg"
-  //可留空
-}
-```
-
-### 致谢
-希望这份文档能帮助你更好地理解和开发 `HuHoBot附属插件`！
+### 附录：事件说明
+- 详见[事件](Events.md)
