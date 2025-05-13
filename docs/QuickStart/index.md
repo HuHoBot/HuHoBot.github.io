@@ -35,7 +35,7 @@
 
     如图:
 
-    ![BindExample](./BindExample.png)
+    ![BindExample](bindExample.png)
 
 - 输入绑定码
 
@@ -51,7 +51,7 @@
 
     - 成功绑定
         - 当机器人弹出这个消息时代表成功绑定
-            ![BindSuccess](./BindSuccess.png)
+            ![BindSuccess](bindSuccess.png)
 
         - 同时控制台会重新连接并提示
             ```bash
