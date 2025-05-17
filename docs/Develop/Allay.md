@@ -1,4 +1,4 @@
-# HuHoBot 自定义Spigot附属插件
+# HuHoBot 自定义Allay附属插件
 
 ### 1. 准备工作
 

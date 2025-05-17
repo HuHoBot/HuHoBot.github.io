@@ -36,7 +36,12 @@ function regCallbackEvent(type,keyWord,func){
 
 mc.listen("onServerStarted",()=>{
     let keyWord = "测试" //触发关键词
-    regCallbackEvent("run",keyWord,Callback)
+    /*NOTE:
+        当注册为run时，只有普通用户可以触发，当注册为runAdmin时，只有管理员可以触发
+        若要使该指令普通用户和管理员都可以触发，请同时注册两个事件回调
+    */
+    regCallbackEvent("run",keyWord,Callback); 
+    regCallbackEvent("runAdmin",keyWord,Callback);
 })
 ```
 
