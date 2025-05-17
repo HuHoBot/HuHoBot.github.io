@@ -47,7 +47,7 @@ mc.listen("onServerStarted",()=>{
 
 ### 注册成功
 ```bash
-[HuHo_Bot] 注册关键词 关键词 回调NAMESPACE::Callback成功
+[HuHo_Bot] 注册run类型事件: 关键词(关键词名称) 回调函数(NameSpace::CallbackFunc) 成功
 ```
 
 - 当出现该信息时，表示注册成功，您可以尝试在群内使用测试命令来进行测试
