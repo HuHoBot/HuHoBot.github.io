@@ -120,7 +120,7 @@ public final class HuHoBotExample extends JavaPlugin implements Listener {
 
 #### 5.1 发送测试命令
 
-在群内发送消息 `@HuHoBot /执行 关键词` 查看是否正确触发监听器。
+在群内发送消息 `@HuHoBot /关键词` 查看是否正确触发监听器。
 
 ### 6. 注意事项
 

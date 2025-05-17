@@ -56,7 +56,7 @@ chatFormat:
   from_game: "<{name}> {msg}" #服内消息转发到群内时的文本
   from_group: "群:<{nick}> {msg}" #群内消息转发到服内时的文本
   post_chat: true #是否在群内发送消息到服务器内
-  post_prefix: "" #群内消息转发到服内时的前缀
+  post_prefix: "" #服内消息转发到群内时的前缀
 
 motd:
   server_ip: "play.easecation.net" #使用"/查在线"时的Motd图片地址（改成你的进服地址）
@@ -68,7 +68,7 @@ motd:
 
 #自定义执行命令
 customCommand:
-  - key: "加白名" #执行关键词，可使用"/执行 关键词 参数1 参数2"来执行自定义命令
+  - key: "加白名" #执行关键词，可使用"/关键词 参数1 参数2"来执行自定义命令
     command: "whitelist add &1" #&1为参数占位符，第一个参数为&1，第二个&2，以此类推
     permission: 0 #0是普通权限，大于0则为管理员权限
 
@@ -94,7 +94,7 @@ customCommand:
 
 ```yaml
 customCommand:
-  - key: "加白名" #执行关键词，可使用"/执行 关键词 参数1 参数2"来执行自定义命令
+  - key: "加白名" #执行关键词，可使用"/关键词 参数1 参数2"来执行自定义命令
     command: "whitelist add &1" #&1为参数占位符，第一个参数为&1，第二个&2，以此类推
     permission: 0 #0是普通权限，大于0则为管理员权限
 

@@ -50,7 +50,7 @@ chatFormat:
   from_game: "<{name}> {msg}" #服内消息转发到群内时的文本
   from_group: "群:<{nick}> {msg}" #群内消息转发到服内时的文本
   post_chat: true #是否在群内发送消息到服务器内
-  post_prefix: "" #群内消息转发到服内时的前缀
+  post_prefix: "" #服内消息转发到群内时的前缀
 # MOTD服务器地址
 # 格式: 地址:端口 (示例: play.easecation.net:19132)
 motdUrl: play.easecation.net:19132
@@ -58,7 +58,7 @@ motdUrl: play.easecation.net:19132
 serverName: AllayMC
 # 自定义命令列表
 customCommand:
-  - key: "加白名" #执行关键词，可使用"/执行 关键词 参数1 参数2"来执行自定义命令
+  - key: "加白名" #执行关键词，可使用"/关键词 参数1 参数2"来执行自定义命令
     command: "whitelist add &1" #&1为参数占位符，第一个参数为&1，第二个&2，以此类推
     permission: 0 #0是普通权限，大于0则为管理员权限
   - key: 管理加白名
@@ -81,7 +81,7 @@ customCommand:
 
 ```yaml
 customCommand:
-  - key: "加白名" #执行关键词，可使用"/执行 关键词 参数1 参数2"来执行自定义命令
+  - key: "加白名" #执行关键词，可使用"/关键词 参数1 参数2"来执行自定义命令
     command: "whitelist add &1" #&1为参数占位符，第一个参数为&1，第二个&2，以此类推
     permission: 0 #0是普通权限，大于0则为管理员权限
 ```
