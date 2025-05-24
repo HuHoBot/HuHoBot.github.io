@@ -5,11 +5,12 @@
 
 #  赞助者名单
 
-| 赞助者 |  | 留言|
-|:---:|:---|:---:|
-| ![头像1](http://q1.qlogo.cn/g?b=qq&nk=3829874284&s=100) | **AAA专跑国道王师傅** | |
-| ![头像2](http://q1.qlogo.cn/g?b=qq&nk=3136568325&s=100) | **莯風Sakura** | |
-| ![头像3](http://q1.qlogo.cn/g?b=qq&nk=2521291740&s=100) | **IKUN**| 原神，启动。|
+| 赞助者 |  | 留言| 金额 |
+|:---:|:---|:---:|:---:|
+| ![头像1](http://q1.qlogo.cn/g?b=qq&nk=3829874284&s=100) | **AAA专跑国道王师傅** | |25.11CNY|
+| ![头像2](http://q1.qlogo.cn/g?b=qq&nk=3136568325&s=100) | **莯風Sakura** | | 25CNY|
+| ![头像3](http://q1.qlogo.cn/g?b=qq&nk=2521291740&s=100) | **IKUN**| 原神，启动。| 11.45CNY|
+| ![头像4](http://q1.qlogo.cn/g?b=qq&nk=853636648&s=100) | **only ice no cream**| | 15CNY|
 
 <style>
   /* 头像样式 */
@@ -26,6 +27,9 @@
     font-weight: bold;
   }
   table:has([alt^="头像"]) td:nth-child(3) {
+    vertical-align: middle;
+  }
+  table:has([alt^="头像"]) td:nth-child(4) {
     vertical-align: middle;
   }
   /* 保持表格宽度自适应 */
