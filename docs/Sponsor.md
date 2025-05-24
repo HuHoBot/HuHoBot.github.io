@@ -9,6 +9,7 @@
 |:---:|:---|:---:|
 | ![头像1](http://q1.qlogo.cn/g?b=qq&nk=3829874284&s=100) | **AAA专跑国道王师傅** | |
 | ![头像2](http://q1.qlogo.cn/g?b=qq&nk=3136568325&s=100) | **莯風Sakura** | |
+| ![头像3](http://q1.qlogo.cn/g?b=qq&nk=2521291740&s=100) | **IKUN**| 原神，启动。|
 
 <style>
   /* 头像样式 */
@@ -23,6 +24,9 @@
   table:has([alt^="头像"]) td:nth-child(2) {
     vertical-align: middle;
     font-weight: bold;
+  }
+  table:has([alt^="头像"]) td:nth-child(3) {
+    vertical-align: middle;
   }
   /* 保持表格宽度自适应 */
   table {
