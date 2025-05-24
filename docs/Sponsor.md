@@ -13,6 +13,7 @@
 | ![头像4](http://q1.qlogo.cn/g?b=qq&nk=853636648&s=100) | **only ice no cream**| | 15CNY|
 | ![头像3](http://q1.qlogo.cn/g?b=qq&nk=2521291740&s=100) | **IKUN**| 原神，启动。| 11.45CNY|
 | ![头像6](http://q1.qlogo.cn/g?b=qq&nk=1430234200&s=100) | **Singl***| 月吗。| 5.20CNY|
+| ![头像7](http://q1.qlogo.cn/g?b=qq&nk=1219690858&s=100) | **小礼**| 兄弟你好香| 1.14CNY|
 
 
 
