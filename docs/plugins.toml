@@ -22,3 +22,9 @@ authors = ["HuoHuas001"]
 github = "https://github.com/HuHoBot/HuHoWhiteList"
 adapter = "Spigot"
 
+[HuHoWhiteList-Lse]
+description = "HuHoBot自助申请白名单插件"
+authors = ["HuoHuas001"]
+github = "https://github.com/HuHoBot/ExpansionPlugin/tree/main/HuHoWhiteList"
+adapter = "Lse"
+
