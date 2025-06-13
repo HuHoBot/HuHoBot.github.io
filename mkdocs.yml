@@ -29,6 +29,7 @@ nav:
     - 请求: Protocol/requests.md
     - 事件: Protocol/events.md
   - 赞助HuHoBot: Sponsor.md
+  - 请求帮助: AskAI/index.md
 
 
 theme:
