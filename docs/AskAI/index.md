@@ -1,12 +1,19 @@
-# 询问AI
-- 本次使用的是[豆包Doubao](https://www.doubao.com/)
+# 🤖 使用AI助手查询HuHoBot文档
 
-# 进行初始化
-1. 打开[豆包Doubao](https://www.doubao.com/)官网，找到输入框
-![豆包Doubao对话框](1.png)
+## 🌐 使用说明
+本次AI查询服务基于[豆包Doubao](https://www.doubao.com/)实现，可快速获取HuHoBot相关文档信息。
 
-2. 在对话框内写入以下文本
-```
+## 🚀 初始化步骤
+
+### 1. 访问豆包官网
+打开[豆包Doubao官网](https://www.doubao.com/)  
+![豆包界面截图](1.png)
+
+### 2. 输入初始化指令
+
+将以下内容 **完整复制** 到对话框：
+
+```markdown
 总结这个网页：https://huhobot.txssb.cn/
 https://huhobot.txssb.cn/QuickStart/
 https://huhobot.txssb.cn/Question/
@@ -16,15 +23,24 @@ https://huhobot.txssb.cn/Adapter/LSE/
 https://huhobot.txssb.cn/Adapter/EndStone/
 https://huhobot.txssb.cn/Adapter/Allay/
 https://huhobot.txssb.cn/Adapter/Nukkit-MOT/
-阅读一下这几个网页，等下我会问你一些问题，你只能在这几个网页中寻找答案，你只需要回答我huhobot的内容，不需要其他的内容。听懂了回复我OK即可
+
+请仔细阅读以上HuHoBot文档网页，后续我将提问相关问题。你只需基于这些网页内容回答HuHoBot相关问题，不要提供其他信息。确认理解请回复"OK"。
 ```
-`注：请全部复制进去，不要只复制一部分，如下图所示`
-![Doubao复制文本](2.png)
 
-3. 点击发送按钮
-![发送按钮](3.png)
+![指令输入示例](2.png)
 
-4. 咨询你想问的问题
+### 3. 发送指令
+点击发送按钮提交请求  
+![发送按钮示意图](3.png)
 
-`出现以下图片则证明已经阅读文本完毕，请在下方对话框内咨询你想问的问题`
-![咨询问题](4.png)
+### 4. 等待准备完成
+当AI回复"OK"后，即可开始提问  
+![准备完成提示](4.png)
+
+## 💡 使用提示
+- 请确保完整复制所有URL链接
+- 每个新会话都需要重新初始化
+- 问题应明确具体，与HuHoBot功能相关
+- 如回答不准确，可尝试重新初始化
+
+❓ 遇到AI也没法解决的问题？[点击加入HuHoBot交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=N6tVRxGR8sDwYHBx9YgAhkqRTp1gseyk&authKey=M7Fd3Op6nHjXjSXefBtHBPqIq2wtX8AfufZor9DrfRrJkhyS2rohkt7iuOSwbtn8&noverify=0&group_code=1005746321)
