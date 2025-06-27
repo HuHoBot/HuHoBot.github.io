@@ -37,4 +37,5 @@ jobs:
           pip install -r "./docs/requirements.txt"
           python ./docs/plugin_gen.py
           python ./docs/adapter_gen.py
+          python ./docs/sponsor_gen.py
       - run: mkdocs gh-deploy --force
