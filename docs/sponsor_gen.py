@@ -4,9 +4,9 @@ from pathlib import Path
 
 # 路径配置
 BASE_DIR = ""
-SPONSOR_JSON = BASE_DIR / "docs" / "sponsor.json"
-SPONSOR_MD = BASE_DIR / "docs" / "Sponsor.md"
-OUTPUT_MD = BASE_DIR / "docs" / "Sponsor.md"  # 直接覆盖原文件
+SPONSOR_JSON = "docs/sponsor.json"
+SPONSOR_MD = "docs/Sponsor.md"
+OUTPUT_MD = "docs/Sponsor.md"  # 直接覆盖原文件
 
 def generate_sponsor_table():
     # 读取赞助者数据
