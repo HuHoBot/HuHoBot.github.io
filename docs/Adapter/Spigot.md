@@ -1,8 +1,8 @@
 # HuHoBot Spigot Adapter
 
-[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/SpigotAdapter?style=for-the-badge)](https://github.com/HuHoBot/SpigotAdapter/releases)
-[![License](https://img.shields.io/github/license/HuHoBot/SpigotAdapter?style=for-the-badge)](https://github.com/HuHoBot/SpigotAdapter/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/SpigotAdapter/release.yml?style=for-the-badge)](https://github.com/HuHoBot/SpigotAdapter/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
+[![License](https://img.shields.io/github/license/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/KotlinMergeAdapter/build.yml?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/actions)
 
 新一代Minecraft服务器管理机器人解决方案，突破传统机器人框架限制，提供更安全稳定的交互体验。
 ## 🚀 功能特性
@@ -24,7 +24,7 @@
 ### 快速开始
 
 1. **访问 GitHub Releases 页面**：
-    - 打开浏览器，访问 [HuHoBot-SpigotAdapter Releases](https://github.com/HuHoBot/SpigotAdapter/releases)
+    - 打开浏览器，访问 [HuHoBot Adapter Releases](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
     - 下载最新版本的 `HuHoBot-vx.x.x-Spigot.jar` 文件
 
 2. **参照** [快速开始](../QuickStart/index.md)
@@ -65,6 +65,8 @@ motd:
 whiteList:
   add: "whitelist add {name}" #添加白名单的指令
   del: "whitelist remove {name}" #删除白名单的指令
+
+callbackConvertImg: 0 #命令回调转换成图片的行数（0为不转换）
 
 #自定义执行命令
 customCommand:
@@ -108,5 +110,5 @@ customCommand:
 
 ## 🤝 参与贡献
 
-欢迎提交PR或通过[Discussions](https://github.com/HuHoBot/SpigotAdapter/discussions)提出建议
+欢迎提交PR或通过[Discussions](https://github.com/HuHoBot/KotlinMergeAdapter/discussions)提出建议
 

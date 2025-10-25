@@ -1,8 +1,8 @@
 # HuHoBot Nukkit-MOT Adapter
 
-[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/Nukkit-MOTAdapter?style=for-the-badge)](https://github.com/HuHoBot/Nukkit-MOTAdapter/releases)
-[![License](https://img.shields.io/github/license/HuHoBot/Nukkit-MOTAdapter?style=for-the-badge)](https://github.com/HuHoBot/Nukkit-MOTAdapter/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/Nukkit-MOTAdapter/release.yml?style=for-the-badge)](https://github.com/HuHoBot/Nukkit-MOTAdapter/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
+[![License](https://img.shields.io/github/license/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/KotlinMergeAdapter/build.yml?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/actions)
 
 新一代Minecraft服务器管理机器人解决方案，突破传统机器人框架限制，提供更安全稳定的交互体验。
 
@@ -28,7 +28,7 @@
 ### 快速开始
 
 1. **访问 GitHub Releases 页面**：
-  - 打开浏览器，访问 [HuHoBot-Nukkit-MOTAdapter Releases](https://github.com/HuHoBot/Nukkit-MOTAdapter/releases)
+  - 打开浏览器，访问 [HuHoBot Adapter Releases](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
   - 下载最新版本的 `HuHoBot-vx.x.x-Nukkit-MOT.jar` 文件
 
 2. **参照** [快速开始](../QuickStart/index.md)
@@ -65,6 +65,8 @@ motd:
   text: "共{online}人在线" #使用"/查在线"时的Motd文本，可使用PlaceholderAPI，留空不显示
   output_online_list: true #是否显示在线列表
   post_img: true #是否显示Motd图片
+
+callbackConvertImg: 0 #命令回调转换成图片的行数（0为不转换）
 
 #自定义执行命令
 customCommand:
@@ -105,5 +107,5 @@ customCommand:
 
 ## 🤝 参与贡献
 
-欢迎提交PR或通过[Discussions](https://github.com/HuHoBot/Nukkit-MOTAdapter/discussions)提出建议
+欢迎提交PR或通过[Discussions](https://github.com/HuHoBot/KotlinMergeAdapter/discussions)提出建议
 

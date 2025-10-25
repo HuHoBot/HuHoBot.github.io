@@ -64,6 +64,7 @@
 			"permission": 1
 		}
 	],
+	"callbackConvertImg": 0, //命令回调转换成图片的行数（0为不转换）
 	"version": 2
 }
 

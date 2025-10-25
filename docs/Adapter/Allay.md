@@ -1,14 +1,11 @@
 # HuHoBot Allay Adapter
 
-[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/AllayMCAdapter?style=for-the-badge)](https://github.com/HuHoBot/SpigotAdapter/releases)
-[![License](https://img.shields.io/github/license/HuHoBot/AllayMCAdapter?style=for-the-badge)](https://github.com/HuHoBot/SpigotAdapter/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/AllayMCAdapter/build.yml?style=for-the-badge)](https://github.com/HuHoBot/SpigotAdapter/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
+[![License](https://img.shields.io/github/license/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/KotlinMergeAdapter/build.yml?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/actions)
 
 专为AllayMC设计的下一代基岩版服务器管理解决方案，提供安全的无第三方QQ机器人依赖管理体验。
 
-!!! note
-
-    由于技术原因，暂时无法为Allay提供命令回调，请等待后续更新.
 
 ### 进阶功能
 
@@ -25,7 +22,7 @@
 ### 快速开始
 
 1. **访问 GitHub Releases 页面**：
-    - 打开浏览器，访问 [HuHoBot-AllayAdapter Releases](https://github.com/HuHoBot/AllayMCAdapter/releases)
+    - 打开浏览器，访问 [HuHoBot Adapter Releases](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
     - 下载最新版本的 `HuHoBot-vx.x.x-AllayMC.jar` 文件
 
 2. **参照** [快速开始](../QuickStart/index.md)
@@ -56,6 +53,8 @@ chatFormat:
 motdUrl: play.easecation.net:19132
 # 服务器显示名称
 serverName: AllayMC
+#命令回调转换成图片的行数（0为不转换）
+callbackConvertImg: 0 
 # 自定义命令列表
 customCommand:
   - key: "加白名" #执行关键词，可使用"/关键词 参数1 参数2"来执行自定义命令

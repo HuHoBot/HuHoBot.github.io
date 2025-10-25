@@ -34,7 +34,7 @@ dependencies {
 ```java 
 package me.yourpackage;
 
-import cn.huohuas001.huHoBot.Api.BotCustomCommand;
+import cn.huohuas001.huhobot.spigot.api.BotCustomCommand;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -59,7 +59,7 @@ public final class HuHoBotExample extends JavaPlugin implements Listener {
         }
 
         try {
-            Class.forName("cn.huohuas001.huHoBot.Api.BotCustomCommand");
+            Class.forName("cn.huohuas001.huhobot.spigot.api.BotCustomCommand");
         } catch (ClassNotFoundException e) {
             logger.severe("无法加载 BotCustomCommand 类：" + e.getMessage());
         }

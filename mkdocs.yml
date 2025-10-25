@@ -14,7 +14,7 @@ nav:
   - 适配器指南:
     - 主页: Adapter/index.md
     - Spigot: Adapter/Spigot.md
-    - Fabric: Adapter/Fabric.md
+    - Mod: Adapter/Mod.md
     - LSE: Adapter/LSE.md
     - EndStone: Adapter/EndStone.md
     - Allay: Adapter/Allay.md

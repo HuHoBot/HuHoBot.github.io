@@ -57,6 +57,7 @@
   "motdUrl": "play.easecation.net:19132", //使用/查在线的时候显示的图片地址（改成你自己的进服地址）
   "serverId": "", //不用管
   "serverName": "EndStone", // 服务器名称
+  "callbackConvertImg": 0, //命令回调转换成图片的行数（0为不转换）
   "version": 1 //不用管
 }
 

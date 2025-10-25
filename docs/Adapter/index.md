@@ -4,8 +4,8 @@
 **适用于**：Leaves、Spigot、Paper、Purpur 等服务端  
 👉 [Spigot 适配器使用指南](Spigot.md)
 
-**适用于**: Fabric Mod 
-👉 [Fabric 适配器使用指南](Fabric.md)
+**适用于**: Fabric/Forge Mod 
+👉 [Fabric 适配器使用指南](Mod.md)
 
 ## 🧱 基岩版 BDS 适配器
 ### LeviLamina 服务端

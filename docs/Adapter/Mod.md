@@ -1,13 +1,14 @@
-# HuHoBot Fabric Adapter
+# HuHoBot Fabric/Forge Adapter
 
-[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/FabricAdapter?style=for-the-badge)](https://github.com/HuHoBot/FabricAdapter/releases)
-[![License](https://img.shields.io/github/license/HuHoBot/FabricAdapter?style=for-the-badge)](https://github.com/HuHoBot/FabricAdapter/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/FabricAdapter/build.yml?style=for-the-badge)](https://github.com/HuHoBot/FabricAdapter/actions)
+[![GitHub Release](https://img.shields.io/github/v/release/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
+[![License](https://img.shields.io/github/license/HuHoBot/KotlinMergeAdapter?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/HuHoBot/KotlinMergeAdapter/build.yml?style=for-the-badge)](https://github.com/HuHoBot/KotlinMergeAdapter/actions)
 
 新一代Minecraft服务器管理机器人解决方案，突破传统机器人框架限制，提供更安全稳定的交互体验。
+
 ## 🚀 功能特性
 - **无缝绑定**：通过WebSocket实现服务器与控制端即时绑定
-- **跨平台支持**：适配Fabric
+- **跨平台支持**：适配Fabric/Forge(1.16+)
 
 ### 进阶功能
 
@@ -19,13 +20,15 @@
 ### 环境要求
 
 - Java 17+ Runtime
-- **任意支持的 Fabric 核心**（包括但不限于 1.16+ 版本）
+- `Architectury API`
+- `fabric-language-kotlin` 或 `forge-language-kotlin`
+- **任意支持的 Fabric/Forge 核心**（包括但不限于 1.16+ 版本）
 
 ### 快速开始
 
 1. **访问 GitHub Releases 页面**：
-- 打开浏览器，访问 [HuHoBot-FabricAdapter Releases](https://github.com/HuHoBot/FabricAdapter/releases)
-- 下载最新版本的 `huhobot-vx.x.x-mcx.x.x-SNAPSHOT` 文件
+- 打开浏览器，访问 [HuHoBot Adapter Releases](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
+- 下载最新版本的 `huhobot-x.x.x-Fabric.jar` 或 `huhobot-x.x.x-Forge.jar` 文件
 
 2. **参照** [快速开始](../QuickStart/index.md)
 
@@ -38,7 +41,8 @@
 #### 注意事项：
 
 - 确保服务器已正确安装 Java 17+ 运行时环境
-- 插件兼容所有支持的 Fabric 核心版本，如没有对应的版本，请自行编译Mod(具体方法见文档)
+- 插件兼容所有支持的 Fabric/Forge 核心版本，如没有对应的版本，请自行编译Mod(具体方法见文档)
+- `仅测试原版Fabric/Forge核心，如有其他核心，该Mod暂不受理不正常工作的情况`
 
 ## ⚙️ 配置示例
 
@@ -65,6 +69,8 @@ motd:
 whiteList:
   add: "whitelist add {name}" #添加白名单的指令
   del: "whitelist remove {name}" #删除白名单的指令
+
+callbackConvertImg: 0 #命令回调转换成图片的行数（0为不转换）
 
 #自定义执行命令
 customCommand:
@@ -103,5 +109,5 @@ customCommand:
 
 ## 🤝 参与贡献
 
-欢迎提交PR或通过[Discussions](https://github.com/HuHoBot/FabricAdapter/discussions)提出建议
+欢迎提交PR或通过[Discussions](https://github.com/HuHoBot/KotlinMergeAdapter/discussions)提出建议
 
