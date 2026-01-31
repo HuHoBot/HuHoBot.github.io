@@ -61,6 +61,7 @@
 ### 代理端主配置 (config.yml)
 
 ```yaml
+name: HuHoBot
 # 服务器标识（自动生成，无需修改）
 serverId: null
 # 密钥（自动生成，无需修改）
