@@ -22,7 +22,7 @@
 
 ### 环境要求
 
-- Java 8+ Runtime
+- Java 17+ Runtime
 - **Velocity 或 BungeeCord 代理服务端**
 - **Redis 服务器**（用于机器人与服务端通信）
 
@@ -30,7 +30,7 @@
 
 1. **访问 GitHub Releases 页面**：
    - 打开浏览器，访问 [HuHoBot Adapter Releases](https://github.com/HuHoBot/KotlinMergeAdapter/releases)
-   - 下载最新版本的 `HuHoBot-vx.x.x-Velocity.jar` 或 `HuHoBot-vx.x.x-BungeeCord.jar` 文件
+   - 下载最新版本的 `HuHoBot-vx.x.x-Proxy.jar` 文件
 
 2. **安装插件**：
    - 将下载的 jar 文件放入代理服务端的 `plugins` 文件夹
@@ -39,10 +39,9 @@
 3. **参照** [快速开始](../QuickStart/index.md) 配置机器人端
 
 4. **安装子服适配器**:
-
-- 打开浏览器，访问 [HuHoBot Adapter Releases](https://github.com/HuHoBot/GroupRCAdapter/releases)
-- 下载最新版本的 `RCHuHoBot-x.x.x-Spigot.jar` 文件
-- 按下文配置
+    - 打开浏览器，访问 [HuHoBot GroupRCAdapter Releases](https://github.com/HuHoBot/GroupRCAdapter/releases)
+    - 下载最新版本的 `RCHuHoBot-x.x.x-Spigot.jar` 文件
+    - 按下文配置
 
 ### 高级配置（可选）
 
