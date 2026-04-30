@@ -10,6 +10,7 @@ nav:
   - 快速开始: QuickStart/index.md
   - 常见问题: Question/index.md
   - 附属插件列表: plugins.md
+  - 在线列表配置: OnlineList.md
   - 管理员帮助: AdminHelp/index.md
   - 适配器指南:
     - 主页: Adapter/index.md
