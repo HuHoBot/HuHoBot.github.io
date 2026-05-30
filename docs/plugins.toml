@@ -28,3 +28,8 @@ authors = ["HuoHuas001"]
 github = "https://github.com/HuHoBot/ExpansionPlugin/tree/main/HuHoWhiteList"
 adapter = "Lse"
 
+[HuHoSTDWhiteList]
+description = "离线服QQ验证码绑定白名单"
+authors = ["kuixuestoopad"]
+github = "https://github.com/kuixuestoopad/HuHoSTDWhiteList"
+adapter = "Spigot"
