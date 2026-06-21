@@ -13,7 +13,7 @@
   "motd": {
     "server_ip": "play.example.com",
     "server_port": 19132,
-    "api": "http://motd.txssb.cn/api/app_img?ip={server_ip}&port={server_port}&dark=true",
+    "api": "http://motd.txssb.cn/api/app_img?ip={server_ip}&port={server_port}&dark=true&lang=zh-CN",
     "text": "共{online}人在线",
     "output_online_list": true,
     "post_img": true,
@@ -29,7 +29,7 @@
 motd:
   server_ip: "play.hypixel.net"
   server_port: 25565
-  api: "http://motd.txssb.cn/api/app_img?ip={server_ip}&port={server_port}&dark=true"
+  api: "http://motd.txssb.cn/api/app_img?ip={server_ip}&port={server_port}&dark=true&lang=zh-CN"
   text: "共{online}人在线"
   output_online_list: true
   post_img: true
@@ -39,19 +39,19 @@ motd:
 
 ## 字段说明
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-| `motd.server_ip` | 字符串 | 服务器地址 |
-| `motd.server_port` | 数字 | 服务器端口 |
-| `motd.api` | 字符串 | Motd 图片接口，支持 `{server_ip}` 和 `{server_port}` 占位符 |
-| `motd.text` | 字符串 | 普通文本模式下的提示文本，`{online}` 会替换为当前在线人数 |
-| `motd.output_online_list` | 布尔值 | 普通文本模式下是否输出在线玩家列表 |
-| `motd.post_img` | 布尔值 | 是否发送 Motd 图片 |
-| `motd.markdown` | 布尔值 | 是否使用 Markdown 模式返回在线玩家列表 |
-| `motd.customMarkdown` | 布尔值 | 是否读取并返回自定义 `online.md` 内容 |
+| 字段                      | 类型   | 说明                                                        |
+| ------------------------- | ------ | ----------------------------------------------------------- |
+| `motd.server_ip`          | 字符串 | 服务器地址                                                  |
+| `motd.server_port`        | 数字   | 服务器端口                                                  |
+| `motd.api`                | 字符串 | Motd 图片接口，支持 `{server_ip}` 和 `{server_port}` 占位符 |
+| `motd.text`               | 字符串 | 普通文本模式下的提示文本，`{online}` 会替换为当前在线人数   |
+| `motd.output_online_list` | 布尔值 | 普通文本模式下是否输出在线玩家列表                          |
+| `motd.post_img`           | 布尔值 | 是否发送 Motd 图片                                          |
+| `motd.markdown`           | 布尔值 | 是否使用 Markdown 模式返回在线玩家列表                      |
+| `motd.customMarkdown`     | 布尔值 | 是否读取并返回自定义 `online.md` 内容                       |
 
 !!! note
-    `motd.customMarkdown` 默认为 `false`。关闭时，查询在线结果中不会包含自定义 Markdown 内容。
+`motd.customMarkdown` 默认为 `false`。关闭时，查询在线结果中不会包含自定义 Markdown 内容。
 
 ## Markdown 模式
 
@@ -59,18 +59,17 @@ motd:
 
 如果你想使用普通文本模式，可以关闭它：
 
-
 ```json
 {
-    "motd": {
-        "markdown": false
-    }
+  "motd": {
+    "markdown": false
+  }
 }
 ```
 
 ```yaml
 motd:
-    markdown: false
+  markdown: false
 ```
 
 关闭 Markdown 模式后，`motd.output_online_list` 和 `motd.text` 会参与生成普通文本内容。
@@ -78,17 +77,18 @@ motd:
 ## 自定义 online.md
 
 如果你想在 `/查在线` 的结果中附带公告、规则、群链接、服务器介绍等内容，可以开启 `motd.customMarkdown`。
+
 ```json
 {
-    "motd": {
-        "customMarkdown": true
-    }
+  "motd": {
+    "customMarkdown": true
+  }
 }
 ```
 
 ```yaml
 motd:
-    customMarkdown: true
+  customMarkdown: true
 ```
 
 然后在 HuHoBot 配置文件同目录下手动创建：
@@ -100,7 +100,7 @@ plugins/HuHoBot/online.md
 也就是说，`online.md` 要和 `config.json` 或 `config.yaml` 放在同一个文件夹中。
 
 !!! warning
-    `online.md` 不会自动生成，需要服主手动创建。
+`online.md` 不会自动生成，需要服主手动创建。
 
 ## online.md 示例
 
@@ -109,7 +109,7 @@ plugins/HuHoBot/online.md
 ```markdown
 # {{.server}}查在线结果
 
-***
+---
 
 ![Motd #700px #389px]({{.img_url}})
 
@@ -122,16 +122,18 @@ plugins/HuHoBot/online.md
 保存后，下一次群内使用 `/查在线` 时，HuHoBot 会读取 `online.md`，并把文件内容作为自定义 Markdown 返回。
 
 ### 可用变量
-| 变量 | 说明 |
-| --- | --- |
-| `{{.server}}` | 服务器名称 |
-| `{{.img_url}}` | Motd 图片链接 |
-| `{{.online_num}}` | 当前在线人数 |
-| `{{.player}}` | 在线玩家列表 |
+
+| 变量              | 说明          |
+| ----------------- | ------------- |
+| `{{.server}}`     | 服务器名称    |
+| `{{.img_url}}`    | Motd 图片链接 |
+| `{{.online_num}}` | 当前在线人数  |
+| `{{.player}}`     | 在线玩家列表  |
 
 - 本Markdown需遵守QQ开放平台规则，若出现链接、违禁词等会导致无法发送
 - Markdown规则可参考[QQ开放平台文档](https://bot.q.qq.com/wiki/develop/api-v2/server-inter/message/type/markdown.html)
 - 注：图片需要在`[]`内填写图片大小，如示例所示
+
 ## 故障排查
 
 ### 查询在线时没有自定义内容

@@ -33,3 +33,9 @@ description = "离线服QQ验证码绑定白名单"
 authors = ["kuixuestoopad"]
 github = "https://github.com/kuixuestoopad/HuHoSTDWhiteList"
 adapter = "Spigot"
+
+[HuHoJoinTip]
+description = "HuHoBot加入(退出)提示插件"
+authors = ["HuoHuas001"]
+github = "https://github.com/HuHoBot/ExpansionPlugin/tree/main/HuHoJoinTip"
+adapter = "Lse"

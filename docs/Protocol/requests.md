@@ -82,7 +82,8 @@
     ```json5
     {
         "serverId":"", //服务器的serverid
-        "msg":"" //组合好的消息
+        "msg":"", //组合好的消息
+        "msgType":"" //发送消息的类型
     }
     ```
 - 回报Body: 无
