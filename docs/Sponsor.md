@@ -3,6 +3,8 @@
 |:---:|:---:|
 | 支付宝 | 微信支付 |
 
+<iframe id="afdian_leaflet_{1}" src="https://afdian.com/leaflet?slug=HuoHuas001" width="100%" scrolling="no" height="200" frameborder="0"></iframe><script>document.body.clientWidth< 700 ? document.getElementById("afdian_leaflet_HuoHuas001").width = "100%" : document.getElementById("afdian_leaflet_HuoHuas001").width = "640"</script>
+
 # ❤️ 温馨提示：  
 - 请各位赞助者量力而行，你们的每一份支持都将直接用于 `HuHoBot` 服务器续费，帮助我们持续运行。  
 
