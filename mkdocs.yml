@@ -7,34 +7,13 @@ copyright: Copyright © 2026 HuoHuas001
 nav:
   - 主页: index.md
   - 命令列表: command.md
-  - 关于公开服务: publicService.md
+#  - 关于公开服务: publicService.md
   - 快速开始: QuickStart/index.md
-  - 常见问题: Question/index.md
+#  - 常见问题: Question/index.md
   - 附属插件列表: plugins.md
   - 在线列表配置: OnlineList.md
-  - 管理员帮助: AdminHelp/index.md
-  - 适配器指南:
-    - 主页: Adapter/index.md
-    - Spigot: Adapter/Spigot.md
-    - Mod: Adapter/Mod.md
-    - LSE: Adapter/LSE.md
-    - EndStone: Adapter/EndStone.md
-    - Allay: Adapter/Allay.md
-    - Nukkit-MOT: Adapter/Nukkit-MOT.md
-    - Velocity/BungeeCord: Adapter/Proxy.md
-    - 第三方: Adapter/Third-Party.md
-  - 附属插件开发指南:
-    - 数据包: Develop/DataPack.md
-    - 事件: Develop/Events.md
-    - Spigot: Develop/Spigot.md
-    - LSE: Develop/LSE.md
-    - Allay: Develop/Allay.md
-  - 协议开发指南:
-    - 主页: Protocol/index.md
-    - 请求: Protocol/requests.md
-    - 事件: Protocol/events.md
   - 赞助HuHoBot: Sponsor.md
-  - 请求帮助: AskAI/index.md
+
 
 
 theme:

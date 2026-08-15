@@ -1,144 +1,52 @@
-# 快速开始
+# HuHoBot Penguin 部署与配置教程
 
-## 🛠️ 选择适配器
-**选择适合您服务器类型的适配器**：
+在使用`HuHoBot` ，需要完成 QQ 开放平台机器人的创建与申请：
 
-📌 请先仔细阅读 [适配器选择指南](../Adapter/index.md) 文档，根据您的服务器类型选择正确的适配器版本
+1. 访问 [QQ 开放平台官网](https://q.qq.com)
+2. 登录并创建/申请一个机器人。
+3. 在入配置时，连接方式请选择 **“其他方式连接”**。
+4. 记录Bot的 `app-id` 与 `secret` 密钥备后续配置使用。
 
-💡 **选择建议**：
+## 配置设置
+打开插件/程序的配置文件，按照如下结构基础与群绑定。
 
-- Java服务器 → 选择Spigot适配器
-- 基岩版BDS → 根据服务端选择LSE或EndStone适配器
-- 其他基岩版 → 参考其他适配器选项
+ Bot 基础与群聊绑定
+```yaml
+bot:
+ -id "_AppID"
+  secret: "Your_Secret"
+  name: HuHoBot
+  groups:
+    - "66535AF0D529..."
+    - "DFD5BB8CBA5C..."
 
-🔗 [立即查看适配器文档](../Adapter/index.md){: .md-button }
+  chat-format:
+    from: '[Game] <{name}> {}'
+    from-group: '[QQ {name}: {message}'
+```
+**配置要点说明：**
 
+- **群号与填入：** 在群聊中发送相关令（如 `查信息`）获取当前群的真实群标识码，并将到的群号依次填入 `groups`表下。
+- **号规范：** 填入 `groups` 列表下的群号 **务必记得加上双引号**（例如66535..."`）。
+- **消息互通格式：** `chat-format` 可自定义游戏端与 QQ 群聊端的消息转发格式，支持 `{name}` 与 `{message}`变量## 新版 Motd API 与在线查询配置
 
-## 1. 📥 安装插件
+### Mot API 启用配置
+若要启用状态及 Mot 展示，需要在配置中定位到 `motd` 字段下的 `api` 项，并将其值换为标准 API 接口：
 
-### 🖥️ Java类核心(Spigot/Nukkit/Allay)安装 (JAR文件)
-```bash
-步骤：
-1. 下载`HuHoBot-XX-X.X.X.jar`文件
-2. 放入服务器的`plugins`文件夹
-3. 重启/启动服务器
+```yaml
+motd:
+  api: "http://motd.txssb.cn/api/app_img?ip={ip}&port={port}&dark=true&lang=zh-CN"
 ```
 
-### 🧱 基岩版BDS安装 (LSE-ZIP文件)
-```bash
-步骤：
-1. 下载`HuHoBot-BDS-vX.X.X.zip`文件
-2. 解压得到`HuHo_Bot`文件夹
-3. 将整个文件夹放入BDS的`plugins`目录
-4. 重启服务器
-```
+**参数与规则说明：**
 
-### ⚙️ EndStone服务器安装 (DLL/SO文件)
-```bash
-步骤：
-1. 下载`endstone_huhobot_vX.X.X.dll`(Windows)或.so文件(Linux)
-2. 放入服务器的`plugins`文件夹
-3. 重启服务端
-```
+- **留占位符**：URL 中的`{ip}` 和 `{port}` 必须保持原样， **不可变动**。
+- **主题配色调节：**
+  - `dark`：深色模式。
+  - `dark=false`：浅色。
 
-### 🔄 其他第三方适配器
-请参考对应平台的插件安装文档
-- 适配器列表：[适配器列表](../Adapter/Third-Party.md)
+**详细文档与调试**：参考[官方文档](https://motd.txssb.cn/docs) 或使用其提供的测试器在线对应的 URL。
+- **兼容性限制：** 暂不支持 **Simpfun (简幻欢)** 节点的状态查询。
 
-✔️ 安装完成后，控制台应显示相关加载成功的日志信息
-
-
-## 2. ⚙️ 插件配置
-
-### 📁 配置文件说明
-```bash
-配置文件路径：
-- Java类核心(Spigot/Nukkit/Allay): plugins/HuHoBot/config.yml
-- BDS服务器: plugins/HuHo_Bot/config.json
-- EndStone服务器: plugins/HuHoBot/config.json
-```
-
-### 🔧 配置步骤
-1. 找到上述路径的配置文件
-2. 用文本编辑器打开修改
-3. 保存后执行命令重载配置：
-   ```bash
-   /huhobot reload
-   ```
-
-🔗 [详细配置参考适配器文档](../Adapter/index.md){: .md-button }
-
-💡 提示：
-
-- 修改配置后建议重启服务器确保完全生效
-- YAML文件需注意缩进格式
-- 重要配置修改后需要重新绑定
-
-## 3. 🤖 添加机器人到QQ群
-
-### 📌 添加前准备
-- 您需要有目标QQ群的管理员权限
-
-### 🔗 添加步骤
-1. **加入官方交流群**  
-   [点击加入HuHoBot交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=N6tVRxGR8sDwYHBx9YgAhkqRTp1gseyk&authKey=M7Fd3Op6nHjXjSXefBtHBPqIq2wtX8AfufZor9DrfRrJkhyS2rohkt7iuOSwbtn8&noverify=0&group_code=1005746321)
-
-2. **将机器人添加到您的服务器群**  
-   - 在交流群内的成员列表中找到HuHoBot
-   - 点击`添加到群聊`并选择你需要添加的群聊
-
-3. **验证机器人已加入**  
-   ```bash
-   @HuHoBot /帮助
-   ```
-   如果机器人正常回复，则表示添加成功
-
-## 4. 🔗 完成服务器绑定
-
-### 🔍 绑定前准备
-- 确保机器人已加入目标QQ群
-- 服务器插件已正确安装并运行
-
-### 🛠️ 绑定流程
-
-1. **获取绑定码**  
-   在服务器控制台查找如下消息：
-   ```bash
-   [HuHoBot] 服务器尚未在机器人进行绑定，请在群内输入"/绑定 xxxxxxxxxxxxxxxxxxxxxxx"
-   ```
-
-2. **在QQ群发起绑定**  
-   在目标QQ群中@机器人并输入：
-   ```bash
-   @HuHoBot /绑定 xxxxxxxxxxxxxxxxxxxxxxx
-   ```
-   ![BindExample](bindExample.png)
-
-3. **确认绑定**  
-   控制台将显示确认指令：
-   ```bash
-   [HuHoBot] 收到一个新的绑定请求，如确认绑定，请输入"/huhobot bind xxxx"来进行确认
-   ```
-   在控制台输入：
-   ```bash
-   huhobot bind xxxx
-   ```
-
-4. **验证绑定成功**  
-    QQ群将收到绑定成功提示  
-    ![BindSuccess](bindSuccess.png)
-    
-    控制台显示连接成功消息：
-    ```bash
-    [HuHoBot] 与服务端握手成功.
-    ```
-
-### ⚠️ 注意事项
-- 一个QQ群只能绑定一个服务器，如需一个服务器绑定多个群请参照[多群绑定](../Question/index.md#_17)
-
-### 🔧 后续操作
-- 如需换绑请直接输入`/绑定`则会覆盖之前绑定的服务器
-- 添加其他管理员：[管理员帮助](../AdminHelp/index.md)
-
-
-
+### 在线查询 Markdown 权说明
+- 使用`查在线`时，请务必在中将 `use-markdown` 设置为 `true` 开，否则**无法正常发送信息**

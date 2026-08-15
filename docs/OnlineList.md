@@ -47,15 +47,12 @@ motd:
 | `motd.text`               | 字符串 | 普通文本模式下的提示文本，`{online}` 会替换为当前在线人数   |
 | `motd.output_online_list` | 布尔值 | 普通文本模式下是否输出在线玩家列表                          |
 | `motd.post_img`           | 布尔值 | 是否发送 Motd 图片                                          |
-| `motd.markdown`           | 布尔值 | 是否使用 Markdown 模式返回在线玩家列表                      |
-| `motd.customMarkdown`     | 布尔值 | 是否读取并返回自定义 `online.md` 内容                       |
+| `motd.use-markdown`           | 布尔值 | 是否使用 Markdown 模式返回在线玩家列表                      |
 
-!!! note
-`motd.customMarkdown` 默认为 `false`。关闭时，查询在线结果中不会包含自定义 Markdown 内容。
 
 ## Markdown 模式
 
-当 `motd.markdown` 为 `true` 时，HuHoBot 会使用 Markdown 模式返回在线玩家列表。
+当 `motd.use-markdown` 为 `true` 时，HuHoBot 会使用 Markdown 模式返回在线玩家列表。
 
 如果你想使用普通文本模式，可以关闭它：
 
@@ -69,38 +66,20 @@ motd:
 
 ```yaml
 motd:
-  markdown: false
+  use-markdown: false
 ```
 
 关闭 Markdown 模式后，`motd.output_online_list` 和 `motd.text` 会参与生成普通文本内容。
 
 ## 自定义 online.md
 
-如果你想在 `/查在线` 的结果中附带公告、规则、群链接、服务器介绍等内容，可以开启 `motd.customMarkdown`。
-
-```json
-{
-  "motd": {
-    "customMarkdown": true
-  }
-}
-```
-
-```yaml
-motd:
-  customMarkdown: true
-```
-
-然后在 HuHoBot 配置文件同目录下手动创建：
+如果你想在 `/查在线` 的结果中附带公告、规则、群链接、服务器介绍等内容，可以修改Markdown
 
 ```text
-plugins/HuHoBot/online.md
+plugins/HuHoBotPenguin/Markdown/online.md
 ```
 
-也就是说，`online.md` 要和 `config.json` 或 `config.yaml` 放在同一个文件夹中。
-
-!!! warning
-`online.md` 不会自动生成，需要服主手动创建。
+也就是说，`online.md` 要放在`Markdown`文件夹中。
 
 ## online.md 示例
 
@@ -150,9 +129,7 @@ plugins/HuHoBot/online.md
 如果控制台出现：
 
 ```text
-无法读取online.md，请检查文件是否存在（该文件需要手动创建）。
+无法读取online.md，请检查文件是否存在。
 ```
-
-说明已经开启了 `motd.customMarkdown`，但插件没有成功读取到 `online.md`。请确认文件存在，并且服务器进程有权限读取该文件。
 
 读取失败时，普通在线列表仍会正常返回，自定义 Markdown 内容会为空。

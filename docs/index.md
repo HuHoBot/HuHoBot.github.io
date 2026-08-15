@@ -1,12 +1,6 @@
 # HuHoBot
 新一代Minecraft服务器管理机器人解决方案，突破传统机器人框架限制，提供更安全稳定的交互体验。
 
-# 在阅读以下内容之前，您是否有一定的阅读和开服基础？能否按文档进行操作？
-!!! warning
-    **请务必阅读此提示，否则将无法使用HuHoBot**
-- 如果是，请继续阅读
-- **如果否，请先查看此链接[AI一键解答](AskAI/index.md)**
-
 ## 🌟 核心优势
 
 | 特性     | 传统方案             | HuHoBot           |
@@ -39,11 +33,7 @@
 
 
 ## 📞QQ交流群
-### 群号:1005746321 [点我加入](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=N6tVRxGR8sDwYHBx9YgAhkqRTp1gseyk&authKey=M7Fd3Op6nHjXjSXefBtHBPqIq2wtX8AfufZor9DrfRrJkhyS2rohkt7iuOSwbtn8&noverify=0&group_code=1005746321)
-
-## ❓ 常见问题
-- 请到[常见问题](Question/index.md)页面查看
-
+### 群号:1103399514 [点我加入](https://qm.qq.com/q/5sq0Mf6IdW)
 
 ## 📄 开源协议
 
