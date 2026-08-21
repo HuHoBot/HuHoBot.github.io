@@ -88,6 +88,12 @@ if (raw instanceof HuHoBotBungee) {
 }
 ```
 
+### 查询认证 QQ 号
+
+```java
+String qq = bot.getAuthenticatedQq(groupOpenId, openId);
+// 未认证时 qq == null
+```
 ## 注册命令和发送消息
 
 ```java

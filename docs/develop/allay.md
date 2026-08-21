@@ -110,6 +110,16 @@ val container = Server.getInstance()
 val bot = container?.plugin as? HuHoBotAllay
 ```
 
+### 查询认证 QQ 号
+
+```kotlin
+val qq: String? = bot?.getAuthenticatedQq(groupOpenId, openId)
+if (qq == null) {
+    // 当前 OpenID 未认证
+}
+```
+
+未认证时返回 `null`，已认证时返回绑定的 QQ 号。
 ## 注册命令和发送消息
 
 ```kotlin

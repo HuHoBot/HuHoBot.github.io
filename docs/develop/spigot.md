@@ -101,6 +101,24 @@ if (raw instanceof HuHoBotSpigot) {
 }
 ```
 
+### 查询认证 QQ 号
+
+查询指定群中某个 OpenID 已绑定的 QQ 号；如果没有认证，返回 `null`：
+
+```java
+String qq = bot.getAuthenticatedQq(groupOpenId, openId);
+if (qq == null) {
+    // 当前 OpenID 未认证
+} else {
+    getLogger().info("已认证 QQ: " + qq);
+}
+```
+
+方法签名：
+
+```java
+String getAuthenticatedQq(String groupOpenId, String openId);
+```
 ## 注册命令和发送消息
 
 ```java

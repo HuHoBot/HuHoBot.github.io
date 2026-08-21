@@ -93,6 +93,12 @@ server.getPluginManager()
 
 更推荐在附属插件初始化时保存由依赖注入或平台生命周期提供的实例。
 
+### 查询认证 QQ 号
+
+```java
+String qq = bot.getAuthenticatedQq(groupOpenId, openId);
+// 未认证时 qq == null
+```
 ## 注册命令和发送消息
 
 ```java

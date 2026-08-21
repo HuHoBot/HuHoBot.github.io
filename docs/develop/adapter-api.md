@@ -65,7 +65,28 @@ event.setCancelled(true);
 
 `replyText` 和 `replyMarkdown` 返回 `boolean`。返回 `true` 表示发送请求已提交，返回 `false` 表示机器人未启动、参数为空或发送失败。
 
-## 运行时命令
+## 查询认证 QQ 号
+
+所有适配器主类都提供同名方法：
+
+```text
+getAuthenticatedQq(groupOpenId, openId): String?
+```
+
+返回指定群中指定 OpenID 绑定的 QQ 号；没有认证时直接返回 `null`。
+
+Java：
+
+```java
+String qq = bot.getAuthenticatedQq(groupOpenId, openId);
+```
+
+Kotlin：
+
+```kotlin
+val qq: String? = bot.getAuthenticatedQq(groupOpenId, openId)
+```
+
 
 各平台主类提供：
 
