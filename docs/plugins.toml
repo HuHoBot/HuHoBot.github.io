@@ -3,3 +3,9 @@ description = "HuHoBot 进服绑定验证插件"
 authors = ["HuoHuas001"]
 github = "https://github.com/HuHoBot/ExpansionSpigotPlugins/tree/main/plugins/GameAuthCode"
 adapter = "Spigot"
+
+[HuHoBotOnlineList-Spigot]
+description = "生成带玩家头像、分页与管理员置顶的 Minecraft 在线玩家列表图片"
+authors = ["RiegaLee"]
+github = "https://github.com/RiegaLee/HuHoBotOnlineList"
+adapter = "Spigot"
