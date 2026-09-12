@@ -102,7 +102,13 @@ String qq = bot.getAuthenticatedQq(groupOpenId, openId);
 ## 注册命令和发送消息
 
 ```java
+// 4参版本 - 注册独立命令（兼容旧 API）
 bot.registerBotCommand("hello", "say Hello {params}", 0, true);
+
+// 5参版本 - 注册扩展命令（关联到扩展）
+bot.registerAddon("MyAddon", "1.0.0", "扩展描述", "作者");
+bot.registerBotCommand("MyAddon", "mycmd", "say Hello {params}", 0, true);
+
 bot.sendBotText("发送到配置中的所有群");
 bot.sendBotText(groupOpenId, "发送到指定群");
 bot.sendBotMarkdown("# Markdown");
@@ -115,10 +121,25 @@ Proxy 共享 API：
 ```java
 import cn.huohuas001.huhobotPenguin.proxy.api.ProxyBotApi;
 
+// 4参版本
 ProxyBotApi.registerBotCommand("hello", "say Hello {params}");
+
+// 5参版本 - 注册扩展命令
+ProxyBotApi.registerAddon("MyAddon", "1.0.0", "扩展描述", "作者");
+ProxyBotApi.registerBotCommand("MyAddon", "mycmd", "say Hello {params}");
+
 ProxyBotApi.sendBotText(bot, "发送到配置群");
 ProxyBotApi.sendBotText(groupOpenId, "发送到指定群");
 ```
+
+### 方法说明
+
+- `registerAddon(name, version, description, author)`：注册扩展，返回 `boolean`
+- `registerBotCommand(addonName, key, command, permission, pushMenu)`：注册扩展命令（5参）
+- `registerBotCommand(key, command, permission, pushMenu)`：注册独立命令（4参，兼容旧 API）
+- `permission > 0`：仅管理员可执行
+- `pushMenu = true`：同步到 QQ 指令面板
+- `unregisterBotCommand(key)` 用于移除运行时注册的命令
 
 ## 回复事件
 

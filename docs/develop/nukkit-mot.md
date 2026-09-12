@@ -109,8 +109,19 @@ if (qq == null) {
 ```kotlin
 val bot = raw as HuHoBotNukkit
 
+// 4参版本 - 注册独立命令（兼容旧 API）
 bot.registerBotCommand(
     key = "hello",
+    command = "say Hello {params}",
+    permission = 0,
+    pushMenu = true
+)
+
+// 5参版本 - 注册扩展命令（关联到扩展）
+bot.registerAddon(name = "MyAddon", version = "1.0.0", description = "扩展描述", author = "作者")
+bot.registerBotCommand(
+    addonName = "MyAddon",
+    key = "mycmd",
     command = "say Hello {params}",
     permission = 0,
     pushMenu = true
@@ -124,7 +135,17 @@ bot.sendBotMarkdown(groupOpenId, markdown, keyboard)
 bot.unregisterBotCommand("hello")
 ```
 
-命令模板支持 `{params}`、`{group}`、`{user}`、`{0}` 以及 `&1` 等公共占位符。
+命令模板支持 `{params}`、`{group}`、`{user}`、`{name}`、`{nickname}`、`{0}` 以及 `&1` 等公共占位符。
+
+### 方法说明
+
+- `registerAddon(name, version, description, author)`：注册扩展，返回 `boolean`
+- `registerBotCommand(addonName, key, command, permission, pushMenu)`：注册扩展命令（5参）
+- `registerBotCommand(key, command, permission, pushMenu)`：注册独立命令（4参，兼容旧 API）
+- `permission > 0`：仅管理员可执行
+- `pushMenu = true`：同步到 QQ 指令面板
+- 指定群发送方法返回 `boolean`
+- `unregisterBotCommand(key)` 用于移除运行时注册的命令
 
 ## 回复和取消
 

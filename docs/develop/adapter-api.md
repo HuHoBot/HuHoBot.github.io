@@ -92,6 +92,8 @@ val qq: String? = bot.getAuthenticatedQq(groupOpenId, openId)
 
 ```text
 registerBotCommand(key, command, permission, pushMenu)
+registerBotCommand(addonName, key, command, permission, pushMenu)
+registerAddon(name, version, description, author)
 unregisterBotCommand(key)
 ```
 
@@ -100,10 +102,71 @@ unregisterBotCommand(key)
 - `{params}`：完整参数
 - `{group}`：群 ID
 - `{user}`：用户 ID
+- `{name}`：绑定的 MC 玩家名（未绑定则返回 QQ 用户名）
+- `{nickname}`：用户的 QQ 昵称
 - `{0}`、`{1}`：按空格拆分后的参数
 - `&1`、`&2`：按空格拆分后的参数
 
 `permission > 0` 表示仅管理员可以执行，`pushMenu = true` 表示同步到 QQ 指令面板。
+
+## 扩展（Addon）API
+
+第三方插件可以通过扩展 API 注册为 HuHoBot 扩展，使其命令出现在 `/附属插件` 列表和 `/帮助` 中。
+
+### 注册扩展
+
+```java
+// Java
+bot.registerAddon("MyAddon", "1.0.0", "我的扩展描述", "作者名");
+```
+
+```kotlin
+// Kotlin
+bot.registerAddon(name = "MyAddon", version = "1.0.0", description = "我的扩展描述", author = "作者名")
+```
+
+参数说明：
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| `name` | `String` | 是 | 扩展唯一标识（不能为空） |
+| `version` | `String` | 否 | 版本号，默认 `"1.0.0"` |
+| `description` | `String` | 否 | 简要描述 |
+| `author` | `String` | 否 | 作者名 |
+
+### 注册扩展命令
+
+注册命令并关联到已注册的扩展：
+
+```java
+// Java - 5参版本，将命令关联到扩展
+bot.registerBotCommand("MyAddon", "mycmd", "say Hello {params}", 0, true);
+```
+
+```kotlin
+// Kotlin
+bot.registerBotCommand(addonName = "MyAddon", key = "mycmd", command = "say Hello {params}", permission = 0, pushMenu = true)
+```
+
+5参版本的 `registerBotCommand` 第一个参数为扩展名称，必须先通过 `registerAddon` 注册。
+
+### 完整示例
+
+```java
+// 1. 注册扩展
+bot.registerAddon("MyAddon", "1.0.0", "示例扩展", "Author");
+
+// 2. 注册扩展命令
+bot.registerBotCommand("MyAddon", "hello", "say Hello {params}", 0, true);
+bot.registerBotCommand("MyAddon", "greet", "say Greetings to {user}", 0, true);
+
+// 3. 也可以注册不关联扩展的独立命令（4参版本，完全兼容旧 API）
+bot.registerBotCommand("standalone", "say Standalone command", 0, true);
+```
+
+### 查询已安装扩展
+
+所有平台都提供 `/附属插件` QQ 命令，可查看已注册的扩展列表及其命令数。
 
 ## 线程约束
 

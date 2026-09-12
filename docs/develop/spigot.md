@@ -124,8 +124,19 @@ String getAuthenticatedQq(String groupOpenId, String openId);
 ```java
 HuHoBotSpigot bot = (HuHoBotSpigot) raw;
 
+// 4参版本 - 注册独立命令（兼容旧 API）
 bot.registerBotCommand(
     "hello",
+    "say Hello {params}",
+    0,
+    true
+);
+
+// 5参版本 - 注册扩展命令（关联到扩展）
+bot.registerAddon("MyAddon", "1.0.0", "扩展描述", "作者");
+bot.registerBotCommand(
+    "MyAddon",
+    "mycmd",
     "say Hello {params}",
     0,
     true
@@ -139,6 +150,9 @@ bot.sendBotMarkdown(groupOpenId, markdown, keyboard);
 
 方法说明：
 
+- `registerAddon(name, version, description, author)`：注册扩展，返回 `boolean`
+- `registerBotCommand(addonName, key, command, permission, pushMenu)`：注册扩展命令（5参）
+- `registerBotCommand(key, command, permission, pushMenu)`：注册独立命令（4参，兼容旧 API）
 - `permission > 0`：仅管理员可执行
 - `pushMenu = true`：同步到 QQ 指令面板
 - 指定群发送方法返回 `boolean`
